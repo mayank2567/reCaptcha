@@ -5,7 +5,8 @@ const request = require('request');
 const hbs = require('express-handlebars');
 const mail = require("./nodemailer");
 const app = express();
-
+const secretKey = '6Lf9uDwUAAAAAANjgk8r0U7OFiYa8pEtDRy5xKiX';
+const siteKey = '6Lf9uDwUAAAAAAW_Vq4CvxRXzbeuvpz8c-kue0Ky';
 
 app.engine("hbs", hbs({
     extname: 'hbs',
@@ -21,7 +22,7 @@ app.use(bodyParser.json());
 app.get('/', (req, res) => {
   // res.sendFile(__dirname + '/index.html');
   res.render('index', {
-    title: "hi There",
+    siteKey: siteKey,
     condition: false
   });
 });
@@ -36,7 +37,7 @@ app.post('/subscribe', (req, res) => {
   }
 
   // Secret Key
-  const secretKey = '6Lf9uDwUAAAAAANjgk8r0U7OFiYa8pEtDRy5xKiX';
+  
 
   // Verify URL
   const verifyUrl = `https://google.com/recaptcha/api/siteverify?secret=${secretKey}&response=${req.body.captcha}&remoteip=${req.connection.remoteAddress}`;
@@ -45,7 +46,8 @@ app.post('/subscribe', (req, res) => {
   request(verifyUrl, (err, response, body) => {
     body = JSON.parse(body);
     console.log(body);
-    mail.sendMail('mayankchandelchat@gmail.com','hi','body');
+    // to send mail uncomment the following line
+    // mail.sendMail('mayankchandelchat@gmail.com','hi','body');
 
     // If Not Successful
     if(body.success !== undefined && !body.success){
