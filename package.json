@@ -1,0 +1,30 @@
+{
+  "name": "recaptcha",
+  "version": "1.0.0",
+  "description": "Testing Google recaptcha",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mayank2567/reCaptcha.git"
+  },
+  "author": "Mayank Chandel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mayank2567/reCaptcha/issues"
+  },
+  "homepage": "https://github.com/mayank2567/reCaptcha#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "consolidate": "^0.15.0",
+    "express": "^4.16.2",
+    "express-handlebars": "^3.0.0",
+    "handlebars": "^4.0.11",
+    "hogan": "^1.0.2",
+    "nodemailer": "^4.4.1",
+    "nodemailer-sendgrid-transport": "^0.2.0",
+    "request": "^2.83.0"
+  }
+}
