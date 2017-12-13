@@ -3,7 +3,6 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const request = require('request');
 const hbs = require('express-handlebars');
-const mail = require("./nodemailer");
 const app = express();
 const secretKey = '6Lf9uDwUAAAAAANjgk8r0U7OFiYa8pEtDRy5xKiX';
 const siteKey = '6Lf9uDwUAAAAAAW_Vq4CvxRXzbeuvpz8c-kue0Ky';

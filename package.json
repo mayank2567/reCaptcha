@@ -1,5 +1,5 @@
 {
-  "name": "recaptcha",
+  "name": "recaptcha-express",
   "version": "1.0.0",
   "description": "Testing Google recaptcha",
   "main": "index.js",
